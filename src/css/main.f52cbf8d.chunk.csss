@@ -1,0 +1,600 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);@import url(https://fonts.googleapis.com/css?family=Rozha+One);body {
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+code {
+    font-family: source-code-pro,Menlo,Monaco,Consolas,"Courier New",monospace
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #000
+}
+
+.background .background-color-overlay,.background .background-wrapper {
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    width: 110%;
+    height: 110%
+}
+
+.background .background-wrapper {
+    background-size: cover;
+    background-position: 50% 50%;
+    filter: blur(8px) brightness(60%);
+    -webkit-filter: blur(16px) brightness(30%)
+}
+
+.background .background-color-overlay {
+    transition: opacity 2s ease;
+    background: linear-gradient(rgba(255,87,87,.5),rgba(51,0,255,.2))
+}
+
+.feed-down-msg {
+    color: #fff;
+    width: 300px;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 24px
+}
+
+.feed-down-msg a {
+    color: #fff;
+    text-decoration: underline
+}
+
+.audio-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px
+}
+
+.audio-controls.disable {
+    pointer-events: none;
+    opacity: .5
+}
+
+.audio-controls .audio-toggle-button {
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px 0 hsla(0,0%,100%,.5);
+    transition: box-shadow .2s ease;
+    margin: 0 40px
+}
+
+.audio-controls .audio-toggle-button:hover {
+    box-shadow: 0 0 20px 0 hsla(0,0%,100%,.5)
+}
+
+.audio-controls .audio-control-icon-wrapper {
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: -10px
+}
+
+.audio-controls .audio-control-icon-wrapper:hover .audio-control-label {
+    opacity: 1
+}
+
+.audio-controls .audio-control-label {
+    margin-top: 10px;
+    color: #fff;
+    opacity: 0;
+    transition: opacity .2s ease
+}
+
+.audio-controls .audio-control-icon,.audio-controls .audio-toggle-icon {
+    height: 30px
+}
+
+@-webkit-keyframes blinker {
+    30% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: 0
+    }
+
+    70% {
+        opacity: 1
+    }
+}
+
+@keyframes blinker {
+    30% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: 0
+    }
+
+    70% {
+        opacity: 1
+    }
+}
+
+.main-audio-section {
+    max-width: 80vw;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+@media (min-width: 768px) {
+    .main-audio-section {
+        width:100%
+    }
+}
+
+.main-audio-section .audio-info-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 220px;
+    height: 200px;
+    box-shadow: 0 0 15px 0 rgba(0,0,0,.3);
+    padding: 20px
+}
+
+@media (min-width: 768px) {
+    .main-audio-section .audio-info-box {
+        max-width:260px;
+        height: 240px
+    }
+}
+
+.main-audio-section .status-indicator {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-radius: 8px;
+    padding: 6px 8px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #fff
+}
+
+.main-audio-section .live-indicator {
+    background: red
+}
+
+.main-audio-section .live-indicator .blinking-circle {
+    -webkit-animation: blinker 2s linear infinite;
+    animation: blinker 2s linear infinite
+}
+
+.main-audio-section .down-indicator {
+    background: #b0b0b0
+}
+
+.main-audio-section .action-icons {
+    position: absolute;
+    top: 10px;
+    right: 10px
+}
+
+.main-audio-section .action-icon {
+    background: #b0b0b0;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer
+}
+
+.main-audio-section .action-icon img {
+    width: 16px;
+    height: 16px
+}
+
+.main-audio-section .music-credit-link {
+    display: block;
+    margin: 40px 0 20px
+}
+
+.main-audio-section .music-credit-link:hover {
+    -webkit-text-decoration: underline #fff;
+    text-decoration: underline #fff
+}
+
+.main-audio-section .music-credit-link.loading {
+    pointer-events: none;
+    opacity: .5
+}
+
+.main-audio-section .music-name {
+    display: flex;
+    align-items: center;
+    color: #fff
+}
+
+.main-audio-section .music-name img {
+    height: 15px;
+    margin-right: 5px
+}
+
+.main-audio-section .airport-code {
+    font-size: 64px;
+    line-height: 34px
+}
+
+.main-audio-section .airport-name {
+    font-size: 20px;
+    margin-top: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center
+}
+
+.main-audio-section .audio-floating-info {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: -20px;
+    cursor: pointer
+}
+
+.main-audio-section .atc-frequency {
+    font-size: 40px;
+    line-height: 34px;
+    margin: 30px 0 15px
+}
+
+.main-audio-section .atc-frequency-type {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 13px;
+    margin-bottom: 20px
+}
+
+@media (min-width: 768px) {
+    .main-audio-section .atc-frequency-type {
+        margin-bottom:30px
+    }
+}
+
+.audio-wrapper,.screen {
+    width: 100%;
+    height: 100%
+}
+
+.screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center
+}
+
+.screen .go-back-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 20px
+}
+
+@media (min-width: 768px) {
+    .screen .go-back-btn {
+        padding:40px
+    }
+}
+
+.change-airport-screen {
+    padding-top: 15vh
+}
+
+.change-airport-screen .autocomplete-wrapper {
+    position: relative;
+    max-width: 80vw;
+    margin: 0 auto
+}
+
+.change-airport-screen .input-text:focus-visible {
+    outline: none;
+    background: rgba(0,0,0,.4)
+}
+
+.change-airport-screen .autocomplete-item,.change-airport-screen .input-text {
+    background: rgba(0,0,0,.4);
+    width: 100%;
+    height: 80px;
+    border: none;
+    color: #fff;
+    font-size: 34px;
+    padding: 20px;
+    text-transform: uppercase
+}
+
+@media (min-width: 768px) {
+    .change-airport-screen .autocomplete-item,.change-airport-screen .input-text {
+        width:400px
+    }
+}
+
+.change-airport-screen .autocomplete-box,.change-airport-screen .input-text {
+    border-radius: 5px
+}
+
+.change-airport-screen .autocomplete-box {
+    position: absolute;
+    margin-top: 20px;
+    max-height: 50vh;
+    overflow: auto;
+    width: 100%
+}
+
+.change-airport-screen .autocomplete-item {
+    cursor: pointer;
+    padding: 20px;
+    background: rgba(0,0,0,.4)
+}
+
+.change-airport-screen .autocomplete-item:hover {
+    background: #000
+}
+
+.change-airport-screen .autocomplete-nonhighlight {
+    opacity: .5
+}
+
+.change-airport-screen .autocomplete-highlight {
+    opacity: 1
+}
+
+.change-airport-screen .error-message {
+    padding: 20px;
+    font-size: 20px;
+    color: #fff
+}
+
+.change-airport-screen .or {
+    color: #fff;
+    text-align: center;
+    margin-top: 30px
+}
+
+.change-airport-screen .pick-btn {
+    display: block;
+    cursor: pointer;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    margin-top: 30px;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    color: #000
+}
+
+.change-airport-screen .pick-btn img {
+    margin-right: 6px;
+    height: 20px
+}
+
+.audio-settings-screen .settings-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.audio-settings-screen .settings-content-wrapper {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-top: -20%
+}
+
+.audio-settings-screen .settings-item {
+    text-align: center;
+    color: #fff;
+    padding: 40px 0
+}
+
+@media (min-width: 768px) {
+    .audio-settings-screen .settings-item {
+        padding:40px
+    }
+}
+
+.audio-settings-screen .settings-item-label {
+    font-size: 18px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase
+}
+
+.audio-settings-screen .slider-input {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 75vw;
+    position: relative;
+    height: 20px
+}
+
+@media (min-width: 768px) {
+    .audio-settings-screen .slider-input {
+        width:500px
+    }
+}
+
+.audio-settings-screen .slider-input .slider-input-line,.audio-settings-screen .slider-input .slider-input-line-solid {
+    background: #fff;
+    border: 1px solid #fff;
+    height: 2px;
+    border-radius: 5px
+}
+
+.audio-settings-screen .slider-input .slider-input-line {
+    opacity: .2;
+    position: absolute;
+    width: 100%
+}
+
+.audio-settings-screen .slider-input .slider-input-btn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid #fff;
+    -webkit-transform: translate(-50%);
+    transform: translate(-50%);
+    cursor: pointer
+}
+
+.audio-settings-screen .slider-input .slider-input-btn:hover {
+    box-shadow: 0 0 15px 0 hsla(0,0%,100%,.5)
+}
+
+* {
+    font-family: "Lato",sans-serif;
+    font-weight: 400;
+    margin: 0;
+    box-sizing: border-box
+}
+
+h1,h2 {
+    font-family: "Rozha One",serif
+}
+
+h5 {
+    font-size: 14px;
+    letter-spacing: 2px
+}
+
+.hide-transition {
+    opacity: 0
+}
+
+a {
+    text-decoration: none
+}
+
+p {
+    font-size: 14px
+}
+
+@media (min-width: 768px) {
+    .mobile-only {
+        display:none!important
+    }
+}
+
+@media (max-width: 768px) {
+    .desktop-only {
+        display:none!important
+    }
+}
+
+.App {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative
+}
+
+.App .sidebar-actions {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10
+}
+
+@media (min-width: 768px) {
+    .App .sidebar-actions {
+        padding:20px
+    }
+}
+
+.App .sidebar-actions .sidebar-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 10px;
+    color: #fff;
+    border-radius: 20px;
+    background-color: transparent;
+    transition: background-color .2s ease
+}
+
+@media (min-width: 768px) {
+    .App .sidebar-actions .sidebar-action {
+        margin-bottom:20px
+    }
+}
+
+.App .sidebar-actions .sidebar-action:hover {
+    background-color: rgba(0,0,0,.1)
+}
+
+.App .sidebar-actions .sidebar-action img {
+    width: 40px;
+    height: 40px
+}
+
+@media (min-width: 768px) {
+    .App .sidebar-actions .sidebar-action img {
+        width:30px;
+        height: 30px
+    }
+}
+
+.App .sidebar-actions .sidebar-action p {
+    font-weight: 700;
+    font-size: 14px
+}
+
+@media (min-width: 768px) {
+    .App .sidebar-actions .sidebar-action p {
+        margin-top:10px
+    }
+}
+
+.App .links {
+    position: absolute;
+    bottom: 20px;
+    right: 20px
+}
+
+.App .links,.App .links a {
+    color: #fff;
+    font-weight: 700
+}
+
+/*# sourceMappingURL=main.f52cbf8d.chunk.css.map */
