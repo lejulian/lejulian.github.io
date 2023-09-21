@@ -119,13 +119,7 @@ function App() {
           </div>
         </div>
       )}
-      <div className="links">
-        <a className="feedback-link" href="https://docs.google.com/forms/d/e/1FAIpQLSfuAQ-fy0ZmQUX2uYRbAzIlHSyCVA1Ad_AOwuWtq1HU2-_Anw/viewform" target="_blank" rel="noopener noreferrer">
-        💬 Share feedback
-        </a>
-        <span>  |  </span>
-        <a className="feedback-link" href="https://www.buymeacoffee.com/lofiatc" target="_blank">☕ Buy me a coffee</a>
-      </div>
+     
     </div>
   );
 }
