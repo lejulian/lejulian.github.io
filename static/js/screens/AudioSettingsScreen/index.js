@@ -86,7 +86,7 @@ function AudioSettingsScreen({ show, goBackFn }) {
       <div className="settings-wrapper">
         <div className="settings-content-wrapper">
           <div className="settings-item">
-            <h3 className="settings-item-label">ATC Volume</h3>
+            <h3 className="settings-item-label">SCOTUS Volume</h3>
             <SliderInput value={atcVolume} setValue={setAtcVolume} />
           </div>
           <div className="settings-item">
