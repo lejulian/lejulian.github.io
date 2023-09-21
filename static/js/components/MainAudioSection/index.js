@@ -126,7 +126,7 @@ function MainAudioSection({
     if (!selectedAirport) {
       return null;
     }
-    return `https://www.liveatc.net/search/?icao=${selectedAirport.icao}`;
+    return `https://www.supremecourt.gov/oral_arguments/audio/2022/21-1086`;
   }
 
   const selectedAirportExternalUrl = getSelectedAirportExternalUrl();
