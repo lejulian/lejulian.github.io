@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined Lofi and Weather Audio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400&display=swap" rel="stylesheet">
+    <title>lofi weather radio</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+    <!-- Audio Sources -->
+    <audio id="weather-audio" src="https://www.supremecourt.gov/oral_arguments/audio/2024/23-824" preload="auto"></audio>
+    <audio loop id="lofi-audio" preload="auto"></audio> <!-- Dynamically controlled -->
+
+    <div id="clock"></div>
+
+    <p id="middle-text"></p>
+
+    <!-- Current Song Display -->
+     <div id="channel-selector-group">
+
+
+        <div id="radio-selector">
+            <label for="channel-select"></label>
+            <select id="channel-select">
+                <!-- Options will be populated dynamically -->
+            </select>
+        </div>
+
+
+        <p id="current-song">
+            <span id="song-title">Loading Music...</span>
+        
+    </div>
+    </p>
+    <div id="control-buttons">
+        <button id="play-pause-btn">
+            <img id="play-pause-icon" src="images/playiconfill.png" alt="Play">
+        </button>
+    
+        <button id="skip-btn">
+            <img id="skip-icon" src="images/skip.png" alt="Skip">
+        </button>
+    </div>
+
+    
+    
+    
+
+    <!-- Controls -->
+    <div id="audio-controls">
+        <p id="weather-volume-text" style="color: white;">SCOTUS Volume</p>
+        <input id="weather-volume" type="range" min="0" max="1" step="0.1" value="1" aria-label="Weather Volume">
+        <p id="lofi-volume-text" style="color: white;">Lofi Volume</p>
+        <input id="lofi-volume" type="range" min="0" max="1" step="0.1" value="1" aria-label="Lofi Volume">
+    </div>
+
+    <script src="script.js"></script>
+
+    <div id="top-left-text">SCOTUS radio</div>
+
+    
+
+</body>
+</html>
