@@ -1,0 +1,301 @@
+/* Body styling */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    background-color: black; /* Fallback background color */
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(4px);
+    background-color: rgba(0, 0, 0); /* Optional color overlay */
+    z-index: -1;
+}
+
+
+#clock {
+    font-size: 150px; /* Adjust the size of the clock text */
+    color: white; /* Ensure the clock is visible */
+    text-align: center;
+    font-family: "Rubik", sans-serif; /* Use the Rubik font */
+    margin-bottom: -20px;
+    position: relative; /* For pseudo-element positioning */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Base glow effect */
+    transition: text-shadow 0.5s ease; /* Smooth transition for hover effect */
+}
+
+#clock::before {
+    content: ""; /* Create a pseudo-element for the effect */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1; /* Ensure it stays behind the clock */
+    filter: blur(50px);
+}
+
+#clock:hover::after {
+    content: attr(data-time); /* Show the clock text for chromatic effect */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(100px at var(--mouse-x, 50%) var(--mouse-y, 50%)); /* Circle mask */
+    
+    -webkit-clip-path: circle(100px at var(--mouse-x, 50%) var(--mouse-y, 50%)); /* Safari support */
+    color: transparent;
+    text-shadow: 
+    1px 0 rgb(25, 0, 255),     /* Stronger red shift to the right */
+    -1px 0 rgb(5, 189, 251),   /* Stronger blue shift to the left */
+    0 2px rgb(245, 76, 3);   /* Stronger green shift downward */
+    
+    filter: blur(3px);
+    pointer-events: none; /* Prevent interaction */
+    z-index: -1; /* Ensure it stays on top */
+}
+
+
+
+#middle-text{
+    font-size: 40px; /* Adjust the size of the clock text */
+    color: white; /* Ensure the clock is visible */
+    text-align: center;
+    font-family: "Rubik", sans-serif; /* Use the Rubik font */
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+#current-song{
+    color: white; 
+    font-size: 20px; 
+    text-align: center; 
+    margin-top: -10px;
+    margin-bottom: 20px;
+    font-family: "Oxanium", sans-serif; /* Use the Rubik font */
+    font-style: italic; /* Make the text italic */
+
+
+}
+
+/* Play/Pause skip button styling */
+
+#control-buttons{
+    display: flex; /* Enable flexbox for button alignment */
+    flex-direction: row; /* Place buttons side-by-side */
+    justify-content: center; /* Center buttons horizontally */
+    gap: 15px; /* Add spacing between buttons */
+    margin-top: 5px; /* Space between the current song and buttons */
+}
+
+/*skip button check*/
+
+#skip-btn {
+    width: 70px; /* Circle button size */
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 40px; /* Makes the button circular */
+    background-color: rgba(255, 255, 255, 0); /* Transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth color transition on hover */
+    margin-bottom: 50px; /* Add spacing between button and sliders */
+}
+
+#skip-btn:hover {
+    background-color: rgba(255, 255, 255, 1); /* Hover background color */
+    border: 1px solid rgb(0,0,0,0);
+}
+
+#skip-btn:hover img {
+    filter: invert(1); /* Fully invert colors */
+}
+
+#skip-btn img {
+    filter: invert(0); /* Default: No inversion */
+    transition: filter 0.3s ease; /* Smooth transition */
+}
+
+#skip-icon {
+    width: 22px; /* Icon size */
+    height: 22px;
+}
+
+#play-pause-btn {
+    width: 70px; /* Circle button size */
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 40px; /* Makes the button circular */
+    background-color: rgba(255, 255, 255, 0); /* Transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth color transition on hover */
+    margin-bottom: 50px; /* Add spacing between button and sliders */
+}
+
+#play-pause-btn:hover {
+    background-color: rgba(255, 255, 255, 1); /* Hover background color */
+    border: 1px solid rgb(0,0,0,0);
+}
+
+#play-pause-icon {
+    width: 22px; /* Icon size */
+    height: 22px;
+}
+
+#play-pause-btn img {
+    filter: invert(0); /* Default: No inversion */
+    transition: filter 0.3s ease; /* Smooth transition */
+}
+
+#play-pause-btn:hover img {
+    filter: invert(1); /* Fully invert colors */
+}
+
+/* Audio controls container styling */
+#audio-controls {
+    position: fixed; /* Fix the controls to the viewport */
+    bottom: 0; /* Anchor to the bottom of the page */
+    width: 100%; /* Full width */
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Center horizontally */
+    gap: 20px; /* Space between elements */
+    padding: 20px; /* Padding for spacing */
+    margin-bottom: -20px;
+}
+
+/* Text styling for sliders */
+#audio-controls p {
+    font-size: 15px;
+    color: white;
+    margin-top: -5px;
+    text-align: center;
+    font-family: "Oxanium", sans-serif; /* Use the Rubik font */
+}
+
+/* Volume sliders styling */
+#audio-controls input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 200px; /* Adjust width of sliders */
+    height: 3px;
+    background: linear-gradient(to right, white 50%, rgba(1, 1, 1, 0.4) 50%);
+    border-radius: 7px;
+    cursor: pointer;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid white;
+    transition: background 0.3s ease; /* Smooth transition for the fill */
+}
+
+#audio-controls input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 13px;
+    height: 13px;
+    background-color: rgb(255, 255, 255, 1);
+    border: 5px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease; /* Smooth scaling */
+}
+
+#audio-controls input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.1); /* Enlarge thumb slightly on hover */
+    background-color: white;
+}
+
+/* Styling for slider gradient */
+#audio-controls input[type="range"]::-moz-range-thumb {
+    width: 17px;
+    height: 17px;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+#top-left-text {
+    position: absolute; /* Position it relative to the viewport */
+    top: 10px; /* Distance from the top */
+    left: 10px; /* Distance from the left */
+    color: white; /* Text color */
+    font-size: 14px; /* Font size */
+    font-family: "Oxanium", sans-serif; /* Font family */
+}
+
+#top-right-text {
+    position: absolute; /* Position it relative to the viewport */
+    top: 10px; /* Distance from the top */
+    right: 10px; /* Distance from the right */
+    color: white; /* Text color */
+    font-size: 14px; /* Font size */
+    font-family: "Oxanium", sans-serif; /* Font family */
+    text-align: right; /* Align the text to the right */
+}
+
+#channel-select {
+    padding:5px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.05); /* Transparent black background */
+    color: white;
+    outline: none;
+    cursor: pointer;
+    width: flex;
+
+    text-align: center;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+
+
+    font-family: "Oxanium", sans-serif; /* Font family */
+    font-size: 20px; /* Font size */
+    font-style: italic; /* Make the text italic */
+
+
+
+}
+
+#channel-select:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Slight hover effect */
+}
+
+#channel-select option {
+    background-color: rgba(0, 0, 0, 0.8); /* Option background */
+    color: white; /* Option text color */
+}
+
+#channel-selector-group {
+    display: flex; /* Enable flexbox for button alignment */
+    flex-direction: row; /* Place buttons side-by-side */
+    justify-content: center; /* Center buttons horizontally */
+    gap: 15px; /* Add spacing between buttons */
+    margin-top: 10px; /* Space between the current song and buttons */
+    margin-bottom: -30px;
+}
+
+#radio-selector {
+    margin-top: -12px;
+}
