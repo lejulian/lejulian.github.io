@@ -19,10 +19,8 @@ const songTitle = document.getElementById('song-title');
 
 // Lofi Playlist
 const lofiPlaylist = [
-    { title: "Byakugan Vision - PandaBeats", src: "playlist/Byakugan Vision.mp3" },
-    { title: "East Blue Skies - PandaBeats", src: "playlist/East Blue Skies.mp3" },
-    { title: "Grand Line - PandaBeats", src: "playlist/Grand Line.mp3" },
-    { title: "Spirited Away - PandaBeats", src: "playlist/Spirited Away.mp3" }
+    { title: "Floater - Auxjack", src: "https://youtu.be/uJv3YCk9wD4?si=jq5Xdtd2EObO32_T" },
+    { title: "Jazzy Wave - yourneighborsclassicbeats", src: "https://youtu.be/P-zJCLBqZc4?si=cr-z9PQMcVtafWqy" },
 ];
 
 // Track the current song index
