@@ -19,8 +19,8 @@ const songTitle = document.getElementById('song-title');
 
 // Lofi Playlist
 const lofiPlaylist = [
-    { title: "Floater - Auxjack", src: "https://youtu.be/uJv3YCk9wD4?si=jq5Xdtd2EObO32_T" },
-    { title: "Jazzy Wave - yourneighborsclassicbeats", src: "https://youtu.be/P-zJCLBqZc4?si=cr-z9PQMcVtafWqy" },
+    { title: "Floater - Auxjack", src: "playlist/Floater.mp3" },
+    { title: "Jazzy Wave - yourneighborsclassicbeats", src: "playlist/Jazzy Wave.mp3" },
 ];
 
 // Track the current song index
