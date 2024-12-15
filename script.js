@@ -147,7 +147,9 @@ sliders.forEach(slider => {
 // Array of radio channels
 const radioChannels = [
     { name: "FDA v. Wages and White Lion", src: "https://www.supremecourt.gov/oral_arguments/audio/2024/23-1038" },
-    { name: "United States v. Miller", src: "https://www.supremecourt.gov/oral_arguments/audio/2024/23-824" },]
+    { name: "United States v. Miller", src: "https://www.supremecourt.gov/oral_arguments/audio/2024/23-824" },  
+    { name: "Hungary v. Simon", src: "https://www.supremecourt.gov/oral_arguments/audio/2024/23-867" },
+    { name: "United States v. Skrmetti", src: "https://www.supremecourt.gov/oral_arguments/audio/2024/23-477" }]
  
 
 

@@ -30,7 +30,7 @@ body::before {
     font-size: 150px; /* Adjust the size of the clock text */
     color: white; /* Ensure the clock is visible */
     text-align: center;
-    font-family: "Rubik", sans-serif; /* Use the Rubik font */
+    font-family: "Helvetica", sans-serif; /* Use the Helvetica font */
     margin-bottom: -20px;
     position: relative; /* For pseudo-element positioning */
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Base glow effect */
