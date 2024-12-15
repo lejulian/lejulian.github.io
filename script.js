@@ -21,6 +21,9 @@ const songTitle = document.getElementById('song-title');
 const lofiPlaylist = [
     { title: "Floater - Auxjack", src: "playlist/Floater.mp3" },
     { title: "Jazzy Wave - yourneighborsclassicbeats", src: "playlist/Jazzy Wave.mp3" },
+    { title: "Deep Sea Treasures - sleepsleepsleep", src: "playlist/Deep Sea Treasures.mp3" },
+    { title: "Chill - sleepsleepsleep", src: "playlist/Chill.mp3" },
+    { title: "Rude - Eternal Youth", src: "playlist/Rude.mp3" },
 ];
 
 // Track the current song index
@@ -97,16 +100,6 @@ function updateClock() {
 }
 const clock = document.getElementById('clock');
 
-// Track mouse movement to update `--mouse-x` and `--mouse-y` CSS variables
-document.addEventListener('mousemove', (e) => {
-    const rect = clock.getBoundingClientRect(); // Get the clock's position
-    const x = e.clientX - rect.left; // X position relative to the clock
-    const y = e.clientY - rect.top; // Y position relative to the clock
-
-    // Set custom properties for CSS
-    clock.style.setProperty('--mouse-x', `${x}px`);
-    clock.style.setProperty('--mouse-y', `${y}px`);
-});
 
 // Update the clock text dynamically
 function updateClock() {
@@ -120,9 +113,6 @@ function updateClock() {
 // Update the clock every second
 setInterval(updateClock, 1000);
 updateClock(); // Initialize on page load
-
-
-
 
 // Select all sliders
 const sliders = document.querySelectorAll('input[type="range"]');
@@ -144,12 +134,15 @@ sliders.forEach(slider => {
 
 // Array of radio channels
 const radioChannels = [
-    { name: "FDA v. Wages and White Lion", src: "https://www.supremecourt.gov/oral_arguments/audio/2024/23-1038" },
+    { name: "FDA v. Wages and White Lion", src: "https://www.supremecourt.gov/oral_arguments/audio/2024/23-1038.mp3" },
     { name: "United States v. Miller", src: "https://www.supremecourt.gov/media/audio/mp3files/23-824.mp3" },  
-    { name: "Hungary v. Simon", src: "https://www.supremecourt.gov/oral_arguments/audio/2024/23-867" },
-    { name: "United States v. Skrmetti", src: "https://www.supremecourt.gov/oral_arguments/audio/2024/23-477" }]
- 
-
+    { name: "Hungary v. Simon", src: "https://www.supremecourt.gov/oral_arguments/audio/2024/23-867.mp3" },
+    { name: "United States v. Skrmetti", src: "https://www.supremecourt.gov/oral_arguments/audio/2024/23-477.mp3" },
+    { name: "Kousisis v. United States", src: "https://www.supremecourt.gov/oral_arguments/audio/2024/23-909.mp3" },
+    { name: "Feliciano v. Dept. of Transportation", src: "https://www.supremecourt.gov/oral_arguments/audio/2024/23-861.mp3" },
+    { name: "Seven County Coalition v. Eagle County", src: "https://www.supremecourt.gov/oral_arguments/audio/2024/23-975.mp3" },
+    { name: "Dewberry Group, Inc. v. Dewberry Engineers Inc.", src: "https://www.supremecourt.gov/oral_arguments/audio/2024/23-900.mp3" }
+ ]
 
 // Select the dropdown and audio element
 const channelSelect = document.getElementById("channel-select");
