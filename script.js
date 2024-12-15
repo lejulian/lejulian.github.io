@@ -1,5 +1,5 @@
 // Audio Elements
-const weatherAudio = document.getElementById('weather-audio');
+const SCOTUSAudio = document.getElementById('scotus-audio');
 const lofiAudio = document.getElementById('lofi-audio');
 
 // Play/Pause Button Elements
@@ -9,7 +9,7 @@ const skipBtn = document.getElementById('skip-btn');
 
 
 // Volume Control Sliders
-const weatherVolume = document.getElementById('weather-volume');
+const SCOTUSVolume = document.getElementById('scotus-volume');
 const lofiVolume = document.getElementById('lofi-volume');
 
 // Current Song Display
@@ -54,12 +54,12 @@ loadSong(currentSongIndex);
 // Play/Pause functionality
 playPauseBtn.addEventListener('click', () => {
     if (!isPlaying) {
-        weatherAudio.play();
+        SCOTUSAudio.play();
         lofiAudio.play();
         playPauseIcon.src = 'images/pauseiconfill.png'; // Change icon to "Pause"
         playPauseIcon.alt = 'Pause';
     } else {
-        weatherAudio.pause();
+        SCOTUSAudio.pause();
         lofiAudio.pause();
         playPauseIcon.src = 'images/playiconfill.png'; // Change icon to "Play"
         playPauseIcon.alt = 'Play';
@@ -72,7 +72,7 @@ skipBtn.addEventListener('click', () => {
     if (!isPlaying) {
         // If playback isn't active, start playback
         lofiAudio.play();
-        weatherAudio.play();
+        SCOTUSAudio.play();
         playPauseIcon.src = 'images/pauseiconfill.png'; // Change icon to "Pause"
         playPauseIcon.alt = 'Pause';
         isPlaying = true; // Update the playback state
@@ -80,8 +80,8 @@ skipBtn.addEventListener('click', () => {
 });
 
 // Adjust volume for weather audio
-weatherVolume.addEventListener('input', (e) => {
-    weatherAudio.volume = e.target.value;
+SCOTUSVolume.addEventListener('input', (e) => {
+    SCOTUSAudio.volume = e.target.value;
 });
 
 // Adjust volume for lofi audio
@@ -153,7 +153,7 @@ const radioChannels = [
 
 // Select the dropdown and audio element
 const channelSelect = document.getElementById("channel-select");
-const radioAudio = document.getElementById("weather-audio");
+const argumentAudio = document.getElementById("scotus-audio");
 
 // Populate the dropdown menu
 radioChannels.forEach((channel, index) => {
@@ -167,13 +167,13 @@ radioChannels.forEach((channel, index) => {
 function changeChannel(index) {
     const selectedChannel = radioChannels[index];
     if (selectedChannel) {
-        radioAudio.src = selectedChannel.src; // Update the audio source
+        argumentAudio.src = selectedChannel.src; // Update the audio source
     }
 
     if (isPlaying) {
         // If playback isn't active, start playback
         lofiAudio.play();
-        weatherAudio.play();
+        SCOTUSAudio.play();
         playPauseIcon.src = 'images/pauseiconfill.png'; // Change icon to "Pause"
         playPauseIcon.alt = 'Pause';
         isPlaying = true; // Update the playback state
