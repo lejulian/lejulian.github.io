@@ -206,7 +206,16 @@ body::before {
     top: 10px; /* Distance from the top */
     left: 10px; /* Distance from the left */
     color: white; /* Text color */
-    font-size: 48px; /* Font size */
+    font-size: 36px; /* Font size */
+    font-family: "Futura", sans-serif; /* Font family */
+}
+
+#top-left-subtext {
+    position: absolute; /* Position it relative to the viewport */
+    top: 55px; /* Distance from the top */
+    left: 10px; /* Distance from the left */
+    color: white; /* Text color */
+    font-size: 12px; /* Font size */
     font-family: "Helvetica", sans-serif; /* Font family */
 }
 
@@ -216,7 +225,7 @@ body::before {
     right: 10px; /* Distance from the right */
     color: white; /* Text color */
     font-size: 14px; /* Font size */
-    font-family: "Helvetica", sans-serif; /* Font family */
+    font-family: "Futura", sans-serif; /* Font family */
     text-align: right; /* Align the text to the right */
 }
 
