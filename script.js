@@ -132,6 +132,24 @@ sliders.forEach(slider => {
     slider.addEventListener('input', () => updateSliderBackground(slider));
 });
 
+SCOTUSVolume.addEventListener('input', (e) => {
+    SCOTUSAudio.volume = e.target.value;
+});
+
+lofiVolume.addEventListener('input', (e) => {
+    lofiAudio.volume = e.target.value;
+});
+
+// Add change events for better mobile support
+SCOTUSVolume.addEventListener('change', (e) => {
+    SCOTUSAudio.volume = e.target.value;
+});
+
+lofiVolume.addEventListener('change', (e) => {
+    lofiAudio.volume = e.target.value;
+});
+
+
 // Array of radio channels
 const radioChannels = [
     { name: "FDA v. Wages and White Lion", src: "https://www.supremecourt.gov/media/audio/mp3files/23-1038.mp3" },
