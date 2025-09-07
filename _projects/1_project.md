@@ -5,7 +5,7 @@ description: Providing increased situational awareness to deployed units via aut
 img: assets/img/sdr_atc.png
 importance: 1
 category: work
-related_publications: true
+related_publications: false
 ---
 
 <div class = "h3">
