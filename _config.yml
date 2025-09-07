@@ -45,7 +45,7 @@ repo_trophies:
 
 navbar_fixed: true
 footer_fixed: true
-search_enabled: true
+search_enabled: false
 socials_in_search: true
 posts_in_search: true
 bib_search: true
@@ -189,6 +189,9 @@ exclude:
   - README.md
   - readme_preview/
   - vendor
+  - _pages/blog.md
+  - _pages/dropdown.md
+  - _projects/4_project.md
 keep_files:
   - CNAME
   - .nojekyll
