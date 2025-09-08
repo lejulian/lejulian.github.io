@@ -412,11 +412,6 @@ ninja.data = [{
           description: "Lo-Fi US Supreme Court Arguments to relax/study to",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
-            },},{id: "projects-auto-contact-manager",
-          title: 'Auto Contact Manager',
-          description: "Experimenting with optimization functions in SciPy to generate a preferred maritime route",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/3_project/";
             },},{
         id: 'social-email',
         title: 'email',
