@@ -41,7 +41,7 @@ The receiver consisted of a 1 m whip antenna connected to a RTL-SDR V4 RTL2832U 
     </div>
 </div>
 <div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
+    Hardware used for the testing.
 </div>
 
 <div class = "h3">
