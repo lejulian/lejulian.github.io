@@ -12,10 +12,10 @@
     {
       "name": "Navy Nuclear Power Training Unit",
       "location": "Charleston, SC",
-      "position": "Chemistry and Radiological Controls Officer",
+      "position": "Chemistry and Radiological Controls Officer / Assistant Staff Training Officer",
       "url": "https://www.energy.gov/nnsa/powering-navy#:~:text=The%20Program%20maintains%20the%20same,national%20or%20international%20nuclear%20program.",
       "startDate": "2023-09-01",
-      "endDate": "Present",
+      "endDate": "2025-10-31",
       "summary": "Trained over 1000 Sailors and Naval Officers annually in radiological controls and operations. Directly responsible for the radiological management and water chemistry of a land-based Naval Reactor. Led a team of 30 specialized Sailors and ran the organization’s continual improvement program.",
       "highlights": ["Reactor and Steam Plant Systems", "QA and Maintenance Programs", "Radiological Controls and Chemistry", "Continuous Improvement Programs" ]
 
@@ -54,6 +54,10 @@
   ],
   "awards": [
     {
+      "title": "Navy and Marine Corps Commendation Medal",
+      "date": "2025"
+    },
+    {
       "title": "Navy and Marine Corps Achievement Medal, Gold Star",
       "date": "2023"
     },
@@ -71,6 +75,13 @@
     }
   ],
   "certificates": [
+    {
+      "name": "Program Management Professional (PMP)",
+      "date": "2025",
+      "issuer": "Project Management Institute",
+      "url": "https://www.pmi.org/certifications/project-management-pmp",
+      "icon": "fa-solid fa-tag"
+    },
     {
       "name": "Nuclear Engineering Officer",
       "date": "2022",
