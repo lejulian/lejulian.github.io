@@ -1,14 +1,21 @@
 {
   "basics": {
     "name": "Julian O'Leary",
-    "label": "Nuclear Submarine Officer",
+    "label": "SETA Consultant",
     "image": "",
     "email": "hi@julianoleary.com",
-    "phone": "(707) 478-8601",
     "url": "https://julianoleary.com",
-    "summary": "Transitioning Nuclear Submarine Officer with 6 years of experience in the INDOPACOM AOR."
+    "summary": "Submarine Veteran currently providing SETA support to DARPA."
   },
   "work": [
+    {
+      "name": "Ventus Solutions",
+      "location": "Arlington, VA",
+      "position": "SETA Consultant",
+      "url": "https://www.ventus-solutions.com",
+      "startDate": "2025-12-01",
+      "endDate": "Present"
+    },
     {
       "name": "Navy Nuclear Power Training Unit",
       "location": "Charleston, SC",

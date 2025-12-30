@@ -24,6 +24,4 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Nuclear Submarine Officer with operational experience in the Indo-Pacific where I led engineering and tactical teams in deployed missions. I hold a strong background in Electronic Warfare (EW), Signals Intelligence (SIGINT), military communications, and naval combat systems.
-
-Transitioning out of the Navy in December 2025. I hold a TS/SCI clearance.
+ Submarine Veteran with operational experience in the Indo-Pacific where I led engineering and tactical teams on deployed missions. I hold a strong background in Electronic Warfare (EW), Signals Intelligence (SIGINT), military communications, and naval combat systems.
